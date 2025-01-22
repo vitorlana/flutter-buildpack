@@ -66,7 +66,7 @@ flutter/bin/flutter pub run build_runner build
 PATH="$PATH":"$(pwd)/flutter/bin/"
 
 if [ -z "$FLUTTER_BUILD" ]; then
-  FLUTTER_BUILD="flutter build web --release"
+  FLUTTER_BUILD="flutter build web --release --dart-define=FLUTTER_ENV=$FLUTTER_ENV"
 fi
 
 print "Compiling the project with $FLUTTER_BUILD"
